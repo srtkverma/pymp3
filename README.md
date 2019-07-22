@@ -4,7 +4,6 @@ A personal fun python project
 REQUIREMENTS:
 - Python3
 - BeautifulSoup
-- Doesn't work on windows(uses `wget` for downloading)
 
 USAGE:
 1. Download the script and run via `python3 main.py`
