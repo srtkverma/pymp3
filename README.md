@@ -2,8 +2,9 @@
 A personal fun python project
 
 REQUIREMENTS:
-- Python3
-- BeautifulSoup
+- `Python3`
+- `BeautifulSoup`
+- `Requests`
 
 USAGE:
 1. Download the script and run via `python3 main.py`
