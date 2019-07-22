@@ -27,10 +27,8 @@ while True:
     user_input=input("Enter yes if correct song, enter no if wrong song: ")
     if user_input=="no":
         continue
-    slashes = find_all(song_url)
-    vid=song_url[slashes[1]+1:len(song_url)]
-    downloadpage_response = get_response("https://mp3download.center/download/{}".format(vid))
-    quality = downloadpage_response.find("button",{"class":"download-mp3-url"})["id"][3:6]
+    vid=song_url[find_all(song_url)[1]+1:len(song_url)]
+    quality = get_response("https://mp3download.center/download/{}".format(vid)).find("button",{"class":"download-mp3-url"})["id"][3:6]
     final_url = "https://mp3download.center/get-file?vid={}&quality={}&title={}".format(vid,quality,title)
     print("Creating file for download....")
     requests.post("https://mp3download.center/trigger-download",data={"vid":vid, "quality":"320"})
@@ -40,7 +38,7 @@ while True:
             break
         else:
             continue
-    file_name = title
+    file_name = f"{title}.mp3"
     handle = open(file_name, "wb")
     total_bytes=0
     for chunk in response.iter_content(chunk_size=512):
