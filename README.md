@@ -8,4 +8,5 @@ A personal fun python project
 
 ### USAGE:
 Linux - `python3 main.py`
+
 Windows - Run the `.exe`
