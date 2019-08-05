@@ -11,7 +11,7 @@ def check_for_update():
         print("Checking for updates")
         if latest_version > current_version:
             print("New version found!!")
-            if(os.path.isfile(f"pymp3v{version}.exe")):
+            if(os.path.isfile(f"pymp3v{latest_version}.exe")):
                 choice2=input("File already exists, y to replace: ")
                 if(choice2=='y'):
                     download_update(latest_version)
