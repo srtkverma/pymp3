@@ -1,3 +1,7 @@
+import my_functions as my
+
+my.check_for_update()
+
 print("Enter a digit from 1 to 2: ")
 print("1. Download by name")
 print("2. Download by Youtube Link")

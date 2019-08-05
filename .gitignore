@@ -1,2 +1,5 @@
 __pycache__/
 *.mp3
+.ipynb_checkpoints/
+Untitled.ipynb
+*.exe
